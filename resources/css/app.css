@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos customizados para o sistema de avaliação */
+@layer components {
+    .btn-primary {
+        @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    }
+    
+    .btn-secondary {
+        @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    }
+    
+    .btn-success {
+        @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    }
+    
+    .btn-danger {
+        @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    }
+    
+    .card {
+        @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+    }
+    
+    .form-input {
+        @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500;
+    }
+    
+    .form-label {
+        @apply block text-sm font-medium text-gray-700 mb-2;
+    }
+    
+    .alert-success {
+        @apply bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg;
+    }
+    
+    .alert-error {
+        @apply bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg;
+    }
+    
+    .alert-warning {
+        @apply bg-yellow-50 border border-yellow-200 text-yellow-800 px-4 py-3 rounded-lg;
+    }
+    
+    .alert-info {
+        @apply bg-blue-50 border border-blue-200 text-blue-800 px-4 py-3 rounded-lg;
+    }
+}
+
+/* Animações customizadas */
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Estilos para o timer */
+.timer-warning {
+    @apply text-orange-600;
+    animation: pulse-slow 1s infinite;
+}
+
+.timer-danger {
+    @apply text-red-600;
+    animation: pulse-slow 0.5s infinite;
+}
+
+/* Estilos para questões */
+.question-option {
+    @apply border border-gray-200 rounded-lg p-4 cursor-pointer transition-all duration-200 hover:bg-gray-50;
+}
+
+.question-option.selected {
+    @apply border-blue-500 bg-blue-50;
+}
+
+.question-option.correct {
+    @apply border-green-500 bg-green-50;
+}
+
+.question-option.incorrect {
+    @apply border-red-500 bg-red-50;
+}
+
+/* Estilos para navegação de questões */
+.question-nav-item {
+    @apply w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-center;
+}
+
+.question-nav-item.current {
+    @apply bg-blue-600 text-white;
+}
+
+.question-nav-item.answered {
+    @apply bg-green-100 text-green-800 border border-green-300;
+}
+
+.question-nav-item.unanswered {
+    @apply bg-gray-100 text-gray-600 border border-gray-300 hover:bg-gray-200;
+}
+
+/* Estilos para barra de progresso */
+.progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2 overflow-hidden;
+}
+
+.progress-fill {
+    @apply h-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-300 ease-out;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .question-nav-item {
+        @apply w-8 h-8 text-xs;
+    }
+}

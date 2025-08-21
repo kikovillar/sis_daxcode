@@ -1,0 +1,54 @@
+# Laravel
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+/.env
+/.env.backup
+/.env.production
+/.phpunit.result.cache
+/docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+# Livewire
+/bootstrap/cache/livewire-components.php
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/storage/logs/*.log
+
+# Cache
+/bootstrap/cache/*
+
+# Ambiente
+/.env.local
+/.env.*.local
+
+# Testes
+/coverage
+
+# Backup
+*.backup
+*.zip
+*.tar
+*.tar.gz
+
+# IDE
+.phpstorm.meta.php
+_ide_helper.php
+*.swp
+*.swo
+
+# Deployment
+/.deploy
+/.github

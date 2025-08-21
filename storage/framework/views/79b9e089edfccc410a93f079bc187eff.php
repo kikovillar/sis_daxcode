@@ -1,0 +1,1 @@
+<?php echo $__env->make('auth.register-extended', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\villa\Desktop\laragon\www\sisInscricao\resources\views/auth/register.blade.php ENDPATH**/ ?>
